@@ -1,0 +1,76 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint:
+    name: Lint + Type check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install uv
+        uses: astral-sh/setup-uv@v2
+      - name: Install dependencies
+        run: uv sync --all-extras --dev
+      - name: Ruff
+        run: uv run ruff check .
+      - name: Mypy
+        run: uv run mypy .
+      - name: Detect secrets
+        run: uv run detect-secrets scan --all-files
+
+  test:
+    name: Tests
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install uv
+        uses: astral-sh/setup-uv@v2
+      - name: Install dependencies
+        run: uv sync --all-extras --dev
+      - name: Run tests (skip live + network)
+        run: uv run pytest -m "not live and not network" --cov
+
+  knowledge:
+    name: Validate knowledge layer
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check markdown files
+        run: |
+          echo "=== Knowledge layer files ==="
+          find knowledge -name "*.md" | wc -l
+          echo "=== File sizes ==="
+          du -sh knowledge/*
+      - name: Validate links
+        run: |
+          # Naive link check — ensure all markdown files referenced exist
+          python -c "
+          import os
+          import re
+          for root, _, files in os.walk('knowledge'):
+              for f in files:
+                  if f.endswith('.md'):
+                      p = os.path.join(root, f)
+                      with open(p) as fh:
+                          content = fh.read()
+                      for m in re.finditer(r'\[([^\]]+)\]\(([^)]+)\)', content):
+                          link = m.group(2)
+                          if link.startswith(('http://', 'https://')):
+                              continue
+                          if not os.path.exists(os.path.join(root, link)):
+                              print(f'BROKEN: {p} -> {link}')
+          "
