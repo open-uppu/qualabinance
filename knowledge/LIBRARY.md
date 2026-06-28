@@ -352,20 +352,23 @@ While in **CONTINUOUS RESEARCH** mode:
 
 | Metric | Value |
 |---|---|
-| Total files | 22 (.md) |
-| Populated | 13 |
-| Total lines | ~8,900 |
-| Papers | 220+ |
+| Total files | 26 (.md + .sh) |
+| Populated | 16 |
+| Total lines | ~9,400 |
+| Papers | 300+ (arxiv live + curated) |
+| arXiv frontier | 219 (live, 30-day window) |
+| OpenAlex cross-disciplinary | 96 (live, since 2023) |
 | Books | 34 |
 | GitHub repos | 40+ |
-| HF models | 15 (live) |
-| HF datasets | 20 (live) |
-| Kaggle datasets | 20 (live) |
+| HF models | 68 (live) |
+| HF datasets | 79 (live) |
+| Kaggle datasets | 269 (live) |
 | Data providers | 50+ |
 | Cross-link threads | 7 |
 | Additional sources | 300+ |
 | Series codes (live in pipeline) | 32 |
 | Tests passing | 11/11 |
+| **Auto-refresh scripts** | **4 (pull_arxiv/hf/kaggle/openalex)** |
 
 ---
 
