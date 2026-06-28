@@ -46,13 +46,18 @@ knowledge/
 │   ├── papers/
 │   │   ├── _q1-ml-finance.md          ✅ 30 papers (ML/AI for finance)
 │   │   ├── _q1-portfolio-risk.md      ✅ 82 entries (Portfolio + Risk + Derivatives)
-│   │   └── _q1-econometrics.md        ✅ 35 papers (Time series + microstructure)
+│   │   ├── _q1-econometrics.md        ✅ 35 papers (Time series + microstructure)
+│   │   ├── _q1-2024-2026-frontier.md  ✅ 70+ papers (foundation models, agents, Polymarket, …) [NEW 2026-06-28]
+│   │   └── _cross-link-map.md         ✅ 7 threads × canon→modern→frontier + reading paths [NEW 2026-06-28]
 │   ├── github-projects/
-│   │   └── _github-with-papers.md     ✅ 40+ repos (FinRL, FinGPT, QuantLib, …)
+│   │   ├── _github-with-papers.md     ✅ 40+ repos (FinRL, FinGPT, QuantLib, …)
+│   │   └── _paper-with-code.md        ✅ paper-with-code index [NEW 2026-06-28]
 │   ├── books/
 │   │   └── _canonical.md              ✅ 34 books (Hull, Shreve, López de Prado, …)
-│   └── data-providers/
-│       └── _with-papers.md            ✅ 50+ providers (FRED, CRSP, Kaiko, …)
+│   ├── data-providers/
+│   │   ├── _with-papers.md            ✅ 50+ providers (FRED, CRSP, Kaiko, …)
+│   │   └── treemap-primary-mapping.md ✅ Treemap cells → primary API + reproducibility [NEW 2026-06-28]
+│   └── _additional-sources.md         ✅ 150+ sources across 11 categories (newsletters, podcasts, central banks, …) [NEW 2026-06-28] 
 │
 └── 06-variable-framework/
     ├── README.md                      ⏳ pending
@@ -70,12 +75,12 @@ knowledge/
 
 | Status | Count |
 |---|---|
-| ✅ Populated (verified content) | 6 |
+| ✅ Populated (verified content) | 9 |
 | 🟡 Scaffold (placeholder + .gitkeep) | ~25 |
 | ⏳ Pending | ~25 |
 | **Total planned** | ~56 |
 
-**Bootstrap completion**: 6/56 = **~11%** — knowledge skeleton + populated research layer done, domain explanations pending.
+**Bootstrap completion**: 9/56 = **~16%** — knowledge skeleton + populated research layer + 2024-2026 frontier + cross-link map + additional sources done, domain explanations pending.
 
 ---
 
