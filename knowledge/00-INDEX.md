@@ -71,16 +71,34 @@ knowledge/
 
 ---
 
+│   ├── huggingface-finance-catalog.md ✅ Live API: 68 finance models + 79 datasets [NEW 2026-06-28]
+│   ├── kaggle-finance-catalog.md      ✅ Live API: 269 finance datasets [NEW 2026-06-28]
+│   ├── arxiv-frontier-live.md         ✅ Live re-fetchable: 219 q-fin papers last 30 days [NEW 2026-06-28]
+│   ├── openalex-cross-disciplinary.md ✅ Live re-fetchable: 96 papers cross-disciplinary (econ+CS+finance) [NEW 2026-06-28]
+│   ├── _multi-source-catalog.md       ✅ NYT/FT/Reddit/Social/OpenAlex/CrossRef + charts [NEW 2026-06-28]
+│   └── _additional-sources.md         ✅ 150+ sources across 11 categories (newsletters, podcasts, central banks, …) [NEW 2026-06-28]
+│
+├── 06-variable-framework/             ← ⭐ POPULATED (2 files: README + L1-L5 series codes)
+├── scripts/                            ← 🆕 Maintenance scripts [NEW 2026-06-28]
+│   ├── pull_arxiv.py                   Auto-refresh arXiv frontier
+│   ├── pull_huggingface.py             Auto-refresh HF catalog
+│   ├── pull_kaggle.py                  Auto-refresh Kaggle catalog
+│   └── pull_openalex.py                Auto-refresh OpenAlex catalog
+├── maintenance-loop.sh                 ← 🆕 Bash wrapper for scheduled refresh [NEW 2026-06-28]
+├── LIBRARY.md                          ← 🆕 Single entry point [NEW 2026-06-28]
+├── TOPIC-INDEX.md                      ← 🆕 Reverse lookup by query [NEW 2026-06-28]
+└── QUICK-REFERENCE.md                  ← 🆕 10 quick-ref cards [NEW 2026-06-28]
+
 ## 📊 Population status
 
 | Status | Count |
 |---|---|
-| ✅ Populated (verified content) | 9 |
-| 🟡 Scaffold (placeholder + .gitkeep) | ~25 |
-| ⏳ Pending | ~25 |
-| **Total planned** | ~56 |
+| ✅ Populated (verified content) | 16 |
+| 🟡 Scaffold (placeholder + .gitkeep) | ~22 |
+| ⏳ Pending | ~22 |
+| **Total planned** | ~60 |
 
-**Bootstrap completion**: 9/56 = **~16%** — knowledge skeleton + populated research layer + 2024-2026 frontier + cross-link map + additional sources done, domain explanations pending.
+**Bootstrap completion**: 16/60 = **~27%** — knowledge skeleton + populated research layer + 2024-2026 frontier + cross-link map + 4 live API catalogs (HF/Kaggle/arXiv/OpenAlex) + auto-refresh scripts + library entry-point + topic index + quick-reference cards done, domain explanations pending.
 
 ---
 

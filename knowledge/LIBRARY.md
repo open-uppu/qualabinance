@@ -2,7 +2,7 @@
 
 > **Single entry point** — find any topic in ≤ 2 clicks from here.
 >
-> **Mode:** 🟢 **LIBRARY** (passive) — no new research. Existing knowledge only, organized for lookup.
+> **Mode:** 🔄 **CONTINUOUS RESEARCH** (active librarian) — pull new papers / models / datasets / sources continuously, organize into library, commit regularly. Never stop.
 >
 > **Built:** 2026-06-28 · **Coverage:** 22 files / 13 populated · ~8,900 lines · 200+ papers, 50+ books, 40+ repos, 150+ sources
 
@@ -332,14 +332,19 @@ Includes **4 reading paths** (alpha / execution / crypto / LLM) with day-counts.
 
 ## 🔁 Maintenance mode
 
-While in **LIBRARY mode**:
-- ❌ No new research
-- ❌ No new commits to knowledge layer (except INDEX maintenance)
-- ✅ Use existing files for answers
+While in **CONTINUOUS RESEARCH** mode:
+- 🔄 Pull new papers / models / datasets / sources regularly (see `maintenance-loop.sh`)
+- 🔄 Re-organize as new info comes in
+- ✅ Commit each incremental addition
+- ✅ Use library to answer questions
 - ✅ When pointing user to info, cite file + section
-- ✅ When asked for something not in library, flag it as **gap** and ask before researching
+- ✅ When asked for something not in library, search actively first
 
-**Exit library mode:** when user says "research [topic]", "find papers on [x]", "explore [topic]".
+**Refresh cadence:**
+- arXiv: weekly (auto-pull newest 50)
+- HuggingFace: bi-weekly (top downloads)
+- Kaggle: monthly (trending datasets)
+- Multi-source: monthly (OpenAlex papers, new sources)
 
 ---
 
@@ -364,4 +369,4 @@ While in **LIBRARY mode**:
 
 ---
 
-**Built:** 2026-06-28 · **Status:** 🟢 LIBRARY (passive) · **Custodian:** Qualabinance / QuantResearcher
+**Built:** 2026-06-28 · **Status:** 🔄 CONTINUOUS RESEARCH (active) · **Custodian:** Qualabinance / QuantResearcher
