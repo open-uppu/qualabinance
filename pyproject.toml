@@ -108,6 +108,21 @@ ml = [
     "peft>=0.9",
 ]
 
+data-pipeline = [
+    "fredapi>=0.5.2",                  # FRED macro data
+    "wbgapi>=1.0.13",                  # World Bank
+    "pycoingecko>=3.1.0",              # CoinGecko crypto
+    "ccxt>=4.3",                       # crypto exchanges OHLCV
+    "duckdb>=0.10",                    # analytical store
+    "pyarrow>=15.0",                   # parquet
+    "sdmx1>=1.2",                      # BIS / OECD / ECB SDMX
+    "imfp>=0.5.4",                     # IMF
+    "pydantic>=2.6",                   # config validation
+    "loguru>=0.7",                     # logging
+    "tenacity>=8.2",                   # retries
+    "tqdm>=4.66",                      # progress bars
+]
+
 [project.urls]
 Homepage = "https://github.com/open-uppu/qualabinance"
 Repository = "https://github.com/open-uppu/qualabinance"
