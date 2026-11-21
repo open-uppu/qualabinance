@@ -160,3 +160,4 @@ Desktop.ini
 *.orig
 .rej
 .merge_file*
+agent-*
