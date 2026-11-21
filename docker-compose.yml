@@ -1,0 +1,20 @@
+# Qualabinance research stack (Portainer Git-backed: push to main -> auto-redeploy).
+# Currently runs the 04-backtest-engine as an idle research worker that validates
+# the live daytrad squad strategies through a CEO-approved READ-ONLY adapter.
+# It never modifies daytrad and never touches live trading.
+services:
+  backtest:
+    build: .
+    image: qualabinance-backtest:latest
+    container_name: qualabinance_backtest
+    restart: unless-stopped
+    environment:
+      - DAYTRAD_ROOT=/app/daytrad
+      - PYTHONUNBUFFERED=1
+    volumes:
+      # daytrad signal functions + local CSV bars, READ-ONLY (chinese-wall approved)
+      - D:/workspace/open-uppu/trader/daytrad:/app/daytrad:ro
+      # qualabinance research code + reports (read-write so reports persist to host)
+      - D:/workspace/open-uppu/trader/qualabinance:/app/qualabinance
+    working_dir: /app/qualabinance/projects/04-backtest-engine
+    command: ["sleep", "infinity"]
