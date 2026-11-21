@@ -39,14 +39,16 @@ uv run python -m src.engine --strategy momentum --symbol BTC-USD --period 2y
 
 ## 🎯 Features
 
-- [ ] Vectorized event-driven backtest
-- [ ] Slippage + commission model
-- [ ] Sharpe / Sortino / Calmar
-- [ ] Max drawdown + underwater curve
-- [ ] Deflated Sharpe ratio (Bailey-López de Prado)
-- [ ] Purged k-fold CV
+- [x] Bar-by-bar rigorous backtest (SL-before-TP, spread both sides, next-bar-open entry)
+- [x] Slippage + commission model (spread-based; commission TBD)
+- [x] Sharpe / expectancy(R) / profit factor
+- [x] Max drawdown (R-space)
+- [x] Deflated Sharpe ratio (Bailey-Lopez de Prado)
+- [x] Walk-forward fold validation
+- [x] Purged k-fold CV (for ML meta-labeling)
 - [ ] Combinatorial purged CV (CPCV)
 - [ ] QuantStats HTML report
+- [x] daytrad adapter: validate live squad strategies on local CSV bars (`validate_squad.py`)
 
 ## ⚠️ Methodology (CRITICAL)
 

@@ -2,8 +2,15 @@
 
 > **Durable state for the Qualabinance quant platform.**
 
-**Last updated**: 2026-06-28 00:55 GMT+7
-**Status**: Bootstrap complete, awaiting first loop activation
+**Last updated**: 2026-11-21 (GMT+7)
+**Status**: L5 (backtest engine) active — cross-project research for daytrad squad approved by CEO
+
+> **CEO approval 2026-11-21**: ผู้ใช้อนุญาตให้ qualabinance เข้าช่วยงานทุกโปรเจกต์
+> (เป้าหมาย: ทำให้ squad daytrad กำไรดีขึ้น) — ข้อยกเว้น chinese-wall แบบ read-only:
+> qualabinance อ่านโค้ด/ข้อมูล daytrad เพื่อ validate กลยุทธ์ได้ ห้ามแก้ไฟล์ daytrad
+> หรือแตะ live trading โดยไม่ได้รับอนุมัติรายครั้ง ผลวิจัยแรก + backlog:
+> `projects/04-backtest-engine/reports/squad_validation_2026-11-21.*` และ
+> `daytrad/improvement_backlog.md`
 
 ---
 
@@ -24,7 +31,7 @@ This file is the **durable state** for Qualabinance development. It follows the 
 | L2 | Foundations notebooks (#01) | ⏸️ pending | — | Awaiting activation |
 | L3 | Stock analysis (#02) | ⏸️ pending | — | Awaiting activation |
 | L4 | Options pricer (#03) | ⏸️ pending | — | Awaiting activation |
-| L5 | Backtest engine (#04) | ⏸️ pending | — | Awaiting activation |
+| L5 | Backtest engine (#04) | 🔵 in-progress | $0.00 | Core engine + metrics (DSR) + purged CV + daytrad adapter done; 11 tests pass; first squad validation 2026-11-21 (9 assets) |
 | L6 | GARCH volatility (#05) | ⏸️ pending | — | Awaiting activation |
 | L7 | Portfolio optimizer (#06) | ⏸️ pending | — | Awaiting activation |
 | L8 | Hierarchical data pipeline (#07) | ⏸️ pending | — | Awaiting activation |

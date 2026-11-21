@@ -13,7 +13,7 @@ Each project is **independent but builds on the knowledge layer** in [`../knowle
 | 01 | [foundations-notebooks](01-foundations-notebooks/) | Math + stats exercises in Jupyter | 🟡 scaffold | Beginner |
 | 02 | [stock-analysis](02-stock-analysis/) | yfinance + MA + vol + dashboard | ⏳ pending | Beginner |
 | 03 | [options-pricer](03-options-pricer/) | Black-Scholes + interactive UI | ⏳ pending | Intermediate |
-| 04 | [backtest-engine](04-backtest-engine/) | Vectorized backtester with risk metrics | ⏳ pending | Intermediate |
+| 04 | [backtest-engine](04-backtest-engine/) | Vectorized backtester with risk metrics | 🔵 in-progress | Intermediate |
 | 05 | [garch-volatility](05-garch-volatility/) | GARCH volatility forecasting | ⏳ pending | Intermediate |
 | 06 | [portfolio-optimizer](06-portfolio-optimizer/) | MVO + Black-Litterman + HRP | ⏳ pending | Intermediate |
 | 07 | [hierarchical-data-pipeline](07-hierarchical-data-pipeline/) | L1-L5 data ingestion | ⏳ pending | Advanced |
