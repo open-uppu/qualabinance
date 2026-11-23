@@ -1,6 +1,6 @@
 [project]
 name = "qualabinance"
-version = "0.1.0"
+version = "0.1.1"
 description = "Multi-asset quantitative finance platform — research, backtest, risk, and live trading."
 readme = "README.md"
 requires-python = ">=3.12"
@@ -200,7 +200,7 @@ exclude_lines = [
 # Project structure (workspace)
 # ===========================================
 [tool.qualabinance]
-version = "0.1.0"
+version = "0.1.1"
 asset_classes = [
     "equities",
     "etfs",
